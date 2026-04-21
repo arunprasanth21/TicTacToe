@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3eb1a95e-a8b8-4587-aa31-cc2c5bf5103c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TicTacToe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TicTacToe.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +38,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "feature/UC2-TosstoDecide/First-Player/Symbol",
+    "git-widget-placeholder": "feature/UC4-ConvertSlotNumber/1-9toBoardIndex-Row/Column",
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
