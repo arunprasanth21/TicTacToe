@@ -1,30 +1,28 @@
-import java.util.Random;
-
 public class TicTacToe {
 
-    static char[][] board = {
-            {'-', '-', '-'},
-            {'-', '-', '-'},
-            {'-', '-', '-'}
-    };
-    static char computerSymbol = 'O';
+    static boolean isHumanTurn = true;
+    static boolean gameOver = false;
 
     public static void main(String[] args) {
-        computerMove();
+        while (!gameOver) {
+            if (isHumanTurn) {
+                humanTurn();
+            } else {
+                computerTurn();
+            }
+            isHumanTurn = !isHumanTurn; // switch turn
+        }
     }
 
-    // Keep picking random slots until a valid empty cell is found
-    static void computerMove() {
-        Random rand = new Random();
-        int row, col;
+    // Placeholder for human move logic
+    static void humanTurn() {
+        System.out.println("Human's turn");
+        gameOver = true; // remove this when real logic is added
+    }
 
-        do {
-            int slot = rand.nextInt(9) + 1; // random slot 1-9
-            row = (slot - 1) / 3;
-            col = (slot - 1) % 3;
-        } while (board[row][col] != '-'); // repeat if cell is taken
-
-        board[row][col] = computerSymbol;
-        System.out.println("Computer placed at row: " + row + ", col: " + col);
+    // Placeholder for computer move logic
+    static void computerTurn() {
+        System.out.println("Computer's turn");
+        gameOver = true; // remove this when real logic is added
     }
 }
