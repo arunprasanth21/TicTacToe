@@ -1,14 +1,30 @@
+import java.util.Random;
+
 public class TicTacToe {
 
-    static char[][] board = new char[3][3];
+    static char[][] board = {
+            {'-', '-', '-'},
+            {'-', '-', '-'},
+            {'-', '-', '-'}
+    };
+    static char computerSymbol = 'O';
 
     public static void main(String[] args) {
-        placeMove(0, 0, 'X');
-        System.out.println(board[0][0]);
+        computerMove();
     }
 
-    // Place the symbol on the board at the given position
-    static void placeMove(int row, int col, char symbol) {
-        board[row][col] = symbol;
+    // Keep picking random slots until a valid empty cell is found
+    static void computerMove() {
+        Random rand = new Random();
+        int row, col;
+
+        do {
+            int slot = rand.nextInt(9) + 1; // random slot 1-9
+            row = (slot - 1) / 3;
+            col = (slot - 1) % 3;
+        } while (board[row][col] != '-'); // repeat if cell is taken
+
+        board[row][col] = computerSymbol;
+        System.out.println("Computer placed at row: " + row + ", col: " + col);
     }
 }
